@@ -1,0 +1,35 @@
+{
+  "name": "uht-strapi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Headless CMS for uht-herisau.ch",
+  "license": "MIT",
+  "author": {
+    "name": "wetteyve"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.19.1",
+    "@strapi/plugin-users-permissions": "4.19.1",
+    "@strapi/strapi": "4.19.1",
+    "better-sqlite3": "8.6.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-rest-cache": "4.2.8",
+    "strapi-provider-upload-azure-storage": "^3.3.0",
+    "styled-components": "5.3.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "18"
+  },
+  "strapi": {
+    "uuid": "3e228583-4562-4420-bff6-68c9fd1f6217"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_pages_navigation_extensions",
+  "info": {
+    "displayName": "navigation_extensions",
+    "icon": "cloud",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "uht_contact": {
+      "type": "email",
+      "default": "info@uht-herisau.ch",
+      "required": true
+    },
+    "jwbr_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "jwbr_url": {
+      "type": "string"
+    },
+    "insta_url": {
+      "type": "string"
+    },
+    "facebook_url": {
+      "type": "string"
+    }
+  }
+}

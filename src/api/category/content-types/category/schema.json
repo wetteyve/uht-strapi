@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "max_age": {
+      "type": "integer"
+    },
+    "max_teams": {
+      "type": "integer"
+    },
+    "short_key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "default": 80
+    },
+    "licenced_players_allowed": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
