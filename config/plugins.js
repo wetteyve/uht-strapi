@@ -3,21 +3,18 @@ module.exports = ({ env }) => ({
     config: {
       jwtSecret: env("JWT_SECRET"),
     },
-  } /*
+  },
   upload: {
     config: {
-      provider: "cloudinary",
+      provider: "strapi-provider-upload-azure-storage",
       providerOptions: {
-        cloud_name: env("CLOUDINARY_NAME"),
-        api_key: env("CLOUDINARY_KEY"),
-        api_secret: env("CLOUDINARY_SECRET"),
-      },
-      actionOptions: {
-        upload: {},
-        delete: {},
+        account: env("STORAGE_ACCOUNT"),
+        accountKey: env("STORAGE_ACCOUNT_KEY"),
+        containerName: env("STORAGE_CONTAINER_NAME"),
+        defaultPath: env("STORAGE_DEFAULT_PATH"),
       },
     },
-  }, */,
+  },
   "rest-cache": {
     config: {
       provider: {
@@ -31,11 +28,13 @@ module.exports = ({ env }) => ({
         keysPrefix: "uht-herisau",
         maxAge: 2592000000, // 30 days
         debug: false,
-        hitpass: false, // also cache requests with Authorization header set
+        hitpass: false, // also cache requests with Authorization headers set
         contentTypes: [
           // list of Content-Types UID to cache
           "api::category.category",
           "api::page.page",
+          "api::registration.registration",
+          "api::sponsor.sponsor",
         ],
       },
     },
