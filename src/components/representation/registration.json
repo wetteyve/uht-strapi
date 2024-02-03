@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_representation_registrations",
+  "info": {
+    "displayName": "Registration",
+    "icon": "cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tournament_start_date": {
+      "type": "date",
+      "required": true
+    },
+    "tournament_end_date": {
+      "type": "date",
+      "required": true
+    },
+    "torunament_edition_nr": {
+      "type": "integer",
+      "required": true
+    },
+    "allow_registration": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "faesslicup": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.text-blocl",
+      "required": true
+    },
+    "checks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text.text-blocl",
+      "required": true
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "other.participating-price",
+      "required": true
+    }
+  }
+}

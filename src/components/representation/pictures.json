@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_representation_pictures",
+  "info": {
+    "displayName": "Pictures",
+    "icon": "television"
+  },
+  "options": {},
+  "attributes": {
+    "collections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "asset.picture-collection",
+      "required": true
+    }
+  }
+}

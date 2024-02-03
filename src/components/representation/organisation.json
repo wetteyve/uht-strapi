@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_representation_organisations",
+  "info": {
+    "displayName": "Organisation",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "ok_ressorts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "team.ok-ressort",
+      "required": true
+    }
+  }
+}

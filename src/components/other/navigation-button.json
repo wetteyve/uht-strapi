@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_other_navigation_buttons",
+  "info": {
+    "displayName": "navigation button",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "show_on_page": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

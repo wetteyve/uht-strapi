@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_representation_categories",
+  "info": {
+    "displayName": "Categories",
+    "icon": "brush",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.text-blocl",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_representation_landings",
+  "info": {
+    "displayName": "Landing",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "caroussel_images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "asset.picture-collection"
+    },
+    "current_news": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.text-blocl"
+    },
+    "sign_up_button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "other.navigation-button",
+      "required": true
+    }
+  }
+}

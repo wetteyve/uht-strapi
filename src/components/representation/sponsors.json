@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_representation_sponsors",
+  "info": {
+    "displayName": "Sponsors",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "lead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.text-blocl",
+      "required": true
+    }
+  }
+}

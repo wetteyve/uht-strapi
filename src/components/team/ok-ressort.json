@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_team_ok_ressorts",
+  "info": {
+    "displayName": "OK Ressort",
+    "icon": "volumeUp"
+  },
+  "options": {},
+  "attributes": {
+    "ressort_name": {
+      "type": "string",
+      "required": true
+    },
+    "members": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

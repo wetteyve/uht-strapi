@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_representation_rankings",
+  "info": {
+    "displayName": "rankings",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "pdf": {
+      "type": "component",
+      "repeatable": false,
+      "component": "asset.file",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_team_teammates",
+  "info": {
+    "displayName": "teammate",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "year_of_birth": {
+      "type": "integer"
+    },
+    "is_licenced": {
+      "type": "boolean"
+    }
+  }
+}

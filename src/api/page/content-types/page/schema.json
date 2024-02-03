@@ -4,7 +4,7 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page",
+    "displayName": "Seiten",
     "description": ""
   },
   "options": {
@@ -37,6 +37,27 @@
       "regex": "^(navbar_(0\\d{2})|footer_(1\\d{2}))$",
       "required": true,
       "unique": false
+    },
+    "navigation_extensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "other.navigation-extensions",
+      "max": 1
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "representation.categories",
+        "representation.landing",
+        "representation.markdown",
+        "representation.organisation",
+        "representation.pictures",
+        "representation.rankings",
+        "representation.registration"
+      ],
+      "required": true,
+      "max": 1,
+      "min": 1
     }
   }
 }

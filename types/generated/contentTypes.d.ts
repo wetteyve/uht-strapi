@@ -786,7 +786,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   info: {
     singularName: 'category';
     pluralName: 'categories';
-    displayName: 'Category';
+    displayName: 'Kategorien';
     description: '';
   };
   options: {
@@ -824,7 +824,7 @@ export interface ApiPagePage extends Schema.CollectionType {
   info: {
     singularName: 'page';
     pluralName: 'pages';
-    displayName: 'Page';
+    displayName: 'Seiten';
     description: '';
   };
   options: {
@@ -839,11 +839,110 @@ export interface ApiPagePage extends Schema.CollectionType {
     linkage_position: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'navbar_099'>;
+    navigation_extensions: Attribute.Component<'other.navigation-extensions'> &
+      Attribute.SetMinMax<
+        {
+          max: 1;
+        },
+        number
+      >;
+    content: Attribute.DynamicZone<
+      [
+        'representation.categories',
+        'representation.landing',
+        'representation.markdown',
+        'representation.organisation',
+        'representation.pictures',
+        'representation.rankings',
+        'representation.registration'
+      ]
+    > &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRegistrationRegistration extends Schema.CollectionType {
+  collectionName: 'registrations';
+  info: {
+    singularName: 'registration';
+    pluralName: 'registrations';
+    displayName: 'Anmeldungen';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    team_name: Attribute.String;
+    category: Attribute.String;
+    captain: Attribute.Component<'team.captain'>;
+    teammates: Attribute.Component<'team.teammate', true>;
+    erinnerungspreis: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::registration.registration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::registration.registration',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSponsorSponsor extends Schema.CollectionType {
+  collectionName: 'sponsors';
+  info: {
+    singularName: 'sponsor';
+    pluralName: 'sponsors';
+    displayName: 'Sponsoren';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    picture: Attribute.Media & Attribute.Required;
+    url: Attribute.String;
+    show_on_page: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<true>;
+    type: Attribute.Enumeration<['regular_sponsor', 'main_sponsor']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'regular_sponsor'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sponsor.sponsor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sponsor.sponsor',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -868,6 +967,8 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::category.category': ApiCategoryCategory;
       'api::page.page': ApiPagePage;
+      'api::registration.registration': ApiRegistrationRegistration;
+      'api::sponsor.sponsor': ApiSponsorSponsor;
     }
   }
 }

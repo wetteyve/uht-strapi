@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_representation_markdowns",
+  "info": {
+    "displayName": "Markdown",
+    "icon": "medium",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "markdown": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.text-blocl"
+    }
+  }
+}

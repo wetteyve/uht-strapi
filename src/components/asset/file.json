@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_asset_files",
+  "info": {
+    "displayName": "file",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "show_on_page": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "file": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
