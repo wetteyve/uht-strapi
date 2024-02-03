@@ -854,7 +854,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'representation.organisation',
         'representation.pictures',
         'representation.rankings',
-        'representation.registration'
+        'representation.registration',
+        'representation.sponsors'
       ]
     > &
       Attribute.Required &

@@ -53,7 +53,8 @@
         "representation.organisation",
         "representation.pictures",
         "representation.rankings",
-        "representation.registration"
+        "representation.registration",
+        "representation.sponsors"
       ],
       "required": true,
       "max": 1,
