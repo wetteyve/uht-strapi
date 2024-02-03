@@ -28,12 +28,14 @@ module.exports = ({ env }) => ({
         },
       },
       strategy: {
-        keysPrefix: "911rs",
+        keysPrefix: "uht-herisau",
         maxAge: 2592000000, // 30 days
         debug: false,
         hitpass: false, // also cache requests with Authorization header set
         contentTypes: [
           // list of Content-Types UID to cache
+          "api::category.category",
+          "api::page.page",
         ],
       },
     },
