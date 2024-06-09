@@ -10,7 +10,7 @@ export interface AssetFile extends Schema.Component {
     show_on_page: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    file: Attribute.Media & Attribute.Required;
+    file: Attribute.Media<'files'> & Attribute.Required;
   };
 }
 
@@ -23,7 +23,7 @@ export interface AssetPictureCollection extends Schema.Component {
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    pictures: Attribute.Media & Attribute.Required;
+    pictures: Attribute.Media<'images', true> & Attribute.Required;
   };
 }
 
@@ -53,7 +53,7 @@ export interface OtherNavigationExtensions extends Schema.Component {
     uht_contact: Attribute.Email &
       Attribute.Required &
       Attribute.DefaultTo<'info@uht-herisau.ch'>;
-    jwbr_logo: Attribute.Media;
+    jwbr_logo: Attribute.Media<'images'>;
     jwbr_url: Attribute.String;
     insta_url: Attribute.String;
     facebook_url: Attribute.String;
@@ -209,7 +209,7 @@ export interface TeamOkRessort extends Schema.Component {
   attributes: {
     ressort_name: Attribute.String & Attribute.Required;
     members: Attribute.String & Attribute.Required;
-    icon: Attribute.Media & Attribute.Required;
+    icon: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
