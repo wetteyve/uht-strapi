@@ -4,10 +4,11 @@
   "info": {
     "singularName": "registration",
     "pluralName": "registrations",
-    "displayName": "Anmeldungen"
+    "displayName": "Anmeldungen",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

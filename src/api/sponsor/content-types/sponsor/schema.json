@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -20,9 +20,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "url": {
       "type": "string"
@@ -34,10 +32,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "regular_sponsor",
-        "main_sponsor"
-      ],
+      "enum": ["regular_sponsor", "main_sponsor"],
       "default": "regular_sponsor",
       "required": true
     }

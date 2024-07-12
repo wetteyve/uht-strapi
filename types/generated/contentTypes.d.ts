@@ -888,9 +888,10 @@ export interface ApiRegistrationRegistration extends Schema.CollectionType {
     singularName: 'registration';
     pluralName: 'registrations';
     displayName: 'Anmeldungen';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     team_name: Attribute.String;
@@ -900,7 +901,6 @@ export interface ApiRegistrationRegistration extends Schema.CollectionType {
     erinnerungspreis: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::registration.registration',
       'oneToOne',
@@ -925,7 +925,7 @@ export interface ApiSponsorSponsor extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -939,7 +939,6 @@ export interface ApiSponsorSponsor extends Schema.CollectionType {
       Attribute.DefaultTo<'regular_sponsor'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::sponsor.sponsor',
       'oneToOne',
