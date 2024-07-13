@@ -23,6 +23,11 @@
       "type": "integer",
       "required": true,
       "default": 7
+    },
+    "cost": {
+      "type": "integer",
+      "required": true,
+      "default": 10
     }
   }
 }

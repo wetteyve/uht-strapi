@@ -76,6 +76,7 @@ export interface OtherParticipatingPrice extends Schema.Component {
     nr_of_prices_per_team: Attribute.Integer &
       Attribute.Required &
       Attribute.DefaultTo<7>;
+    cost: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<10>;
   };
 }
 
