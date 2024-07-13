@@ -28,6 +28,11 @@
       "type": "integer",
       "required": true,
       "default": 10
+    },
+    "paidCat": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

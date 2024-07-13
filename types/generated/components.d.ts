@@ -77,6 +77,11 @@ export interface OtherParticipatingPrice extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<7>;
     cost: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<10>;
+    paidCat: Attribute.Relation<
+      'other.participating-price',
+      'oneToMany',
+      'api::category.category'
+    >;
   };
 }
 
