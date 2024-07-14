@@ -168,7 +168,7 @@ export interface RepresentationRegistration extends Schema.Component {
   attributes: {
     tournament_start_date: Attribute.Date & Attribute.Required;
     tournament_end_date: Attribute.Date & Attribute.Required;
-    torunament_edition_nr: Attribute.Integer & Attribute.Required;
+    tournament_edition_nr: Attribute.Integer & Attribute.Required;
     allow_registration: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;

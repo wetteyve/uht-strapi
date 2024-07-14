@@ -15,7 +15,7 @@
       "type": "date",
       "required": true
     },
-    "torunament_edition_nr": {
+    "tournament_edition_nr": {
       "type": "integer",
       "required": true
     },
