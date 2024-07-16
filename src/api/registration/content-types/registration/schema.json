@@ -30,6 +30,11 @@
     },
     "erinnerungspreis": {
       "type": "boolean"
+    },
+    "faesslicup": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

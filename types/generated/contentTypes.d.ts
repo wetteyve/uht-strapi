@@ -899,6 +899,9 @@ export interface ApiRegistrationRegistration extends Schema.CollectionType {
     captain: Attribute.Component<'team.captain'>;
     teammates: Attribute.Component<'team.teammate', true>;
     erinnerungspreis: Attribute.Boolean;
+    faesslicup: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
