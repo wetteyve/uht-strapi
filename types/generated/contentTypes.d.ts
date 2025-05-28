@@ -873,6 +873,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         },
         number
       >;
+    seo_data: Attribute.Component<'other.seo-data'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &

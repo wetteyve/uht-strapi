@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_other_seo_data",
+  "info": {
+    "displayName": "SEO Data",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "allow_indexing": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "preview_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

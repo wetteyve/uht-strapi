@@ -161,6 +161,27 @@ export interface RepresentationCategories extends Schema.Component {
   };
 }
 
+export interface OtherSeoData extends Schema.Component {
+  collectionName: 'components_other_seo_data';
+  info: {
+    displayName: 'SEO Data';
+    icon: 'command';
+  };
+  attributes: {
+    allow_indexing: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    keywords: Attribute.String;
+    preview_image: Attribute.Media<'images'>;
+  };
+}
+
 export interface OtherParticipatingPrice extends Schema.Component {
   collectionName: 'components_registration_participating_prices';
   info: {
@@ -261,6 +282,7 @@ declare module '@strapi/types' {
       'representation.markdown': RepresentationMarkdown;
       'representation.landing': RepresentationLanding;
       'representation.categories': RepresentationCategories;
+      'other.seo-data': OtherSeoData;
       'other.participating-price': OtherParticipatingPrice;
       'other.navigation-extensions': OtherNavigationExtensions;
       'other.navigation-button': OtherNavigationButton;

@@ -59,6 +59,12 @@
       "required": true,
       "max": 1,
       "min": 1
+    },
+    "seo_data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "other.seo-data",
+      "required": true
     }
   }
 }
