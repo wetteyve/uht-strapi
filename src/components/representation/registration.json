@@ -7,18 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "tournament_start_date": {
-      "type": "date",
-      "required": true
-    },
-    "tournament_end_date": {
-      "type": "date",
-      "required": true
-    },
-    "tournament_edition_nr": {
-      "type": "integer",
-      "required": true
-    },
     "allow_registration": {
       "type": "boolean",
       "default": false,
